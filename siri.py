@@ -18,7 +18,7 @@ def listen():
                 yield answer['text']
 
 
-text_mass = []
+text_mass = ['pass']
 all_math_facts = ['pass']
 
 for text in listen():
@@ -66,12 +66,12 @@ for text in listen():
         engine.runAndWait()
 
     elif text == 'все':
-        print('\n', all_math_facts)
+        print('\n', all_math_facts[1:])
         engine.say('хочешь все факты? ну на')
         engine.runAndWait()
         
     elif text == 'слова':
-        print('\n', text_mass)
+        print('\n', text_mass[1:])
         engine.say('тебе все слова повторить? мне не жалко')
         engine.runAndWait()
         
