@@ -38,8 +38,8 @@ for text in listen():
             engine.runAndWait()
             text_mass.append(text)
             all_math_facts.append(math_fact)
-            print(text_mass)
-            print(all_math_facts)
+            # print(text_mass)
+            # print(all_math_facts)
         else:
             print('\n',all_math_facts[-1])
             engine.say('Вы снова просите факт (ту же команду), хм, хорошо, вот он!')
@@ -57,8 +57,8 @@ for text in listen():
         engine.runAndWait()
         text_mass.append(text)
         all_math_facts.append(math_fact)
-        print(text_mass)
-        print(all_math_facts)
+        # print(text_mass)
+        # print(all_math_facts)
     
     elif text == 'назад':  # не поддерживает перескока на несколько назад. можно только предыдущий
         print('\n', all_math_facts[-2])
@@ -69,7 +69,11 @@ for text in listen():
         print('\n', all_math_facts)
         engine.say('хочешь все факты? ну на')
         engine.runAndWait()
-
+        
+    elif text == 'слова':
+        print('\n', text_mass)
+        engine.say('тебе все слова повторить? мне не жалко')
+        engine.runAndWait()
         
     elif text == 'пока':
         print('\n','блин, ну ладно(')
